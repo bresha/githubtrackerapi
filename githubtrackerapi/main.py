@@ -32,5 +32,5 @@ def get_handlers():
     return db
 
 @app.get("/api/handlers/{handler}")
-def get_handler(handler):
+def get_handler(handler: str) -> list:
     return [item for item in db if item['handler'] == handler]
