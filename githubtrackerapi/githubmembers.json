@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "handler": "bresha"
+    },
+    {
+        "id": 2,
+        "handler": "mmaljak"
+    },
+    {
+        "id": 3,
+        "handler": "valentin994"
+    },
+    {
+        "id": 4,
+        "handler": "amotl"
+    },
+    {
+        "id": 5,
+        "handler": "adhithiravi"
+    },
+    {
+        "id": 6,
+        "handler": "mnajdova"
+    },
+    {
+        "id": 7,
+        "handler": "siriwatknp"
+    },
+    {
+        "id": 8,
+        "handler": "renovate-bot"
+    },
+    {
+        "id": 9,
+        "handler": "michaldudak"
+    },
+    {
+        "id": 10,
+        "handler": "mbrookes"
+    },
+    {
+        "id": 11,
+        "handler": "banani"
+    }
+]
