@@ -1,6 +1,8 @@
 from datetime import datetime
 from fastapi import FastAPI
+
 from .schemas import load_db, save_db, GithubMember
+
 
 app = FastAPI()
 
@@ -22,6 +24,7 @@ async def current_date():
 def get_githubmembers():
     return db
 
+
 @app.get("/api/githubmembers/{handler}")
 def get_githubmember(handler: str) -> list:
     return [item for item in db if item.handler == handler]
@@ -30,3 +33,4 @@ def get_githubmember(handler: str) -> list:
 def add_githubmember(gm: GithubMember) -> None:
     db.append(gm)
     save_db(db)
+
