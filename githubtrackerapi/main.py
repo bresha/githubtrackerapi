@@ -1,5 +1,6 @@
 from datetime import datetime
 from fastapi import FastAPI
+from fastapi import HTTPException
 
 app = FastAPI()
 
@@ -32,5 +33,11 @@ def get_handlers():
     return db
 
 @app.get("/api/handlers/{handler}")
-def get_handler(handler: str) -> list:
-    return [item for item in db if item['handler'] == handler]
+def get_handler(handler: str) -> dict:
+    result = [item for item in db if item['handler'] == handler]
+    if result:
+        return result[0]
+    raise HTTPException(
+        status_code=404, 
+        detail=f"No tracked Github users with handler {handler}"
+    )
